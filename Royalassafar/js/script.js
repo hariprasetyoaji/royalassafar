@@ -1,19 +1,47 @@
-  
+// start scroll bottom
+$("#scroll-1").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#judulutama").offset().top
+    }, 1500);
+});
+$("#scroll-2").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#judulabout").offset().top
+    }, 1500);
+});
+$("#scroll-3").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#produk-layanan").offset().top
+    }, 1500);
+});
+$("#scroll-4").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#maps").offset().top
+    }, 1500);
+});
+// end scroll bottom
+
 
   // START SCROLL TOP
+
   $(document).ready(function(){
 	$(window).scroll(function(){
-		if ($(window).scrollTop() > 100) {
-			$('#tombolScrollTop').fadeIn();
+		var scrollHeight = $(document).height();
+		var scrollPosition = $(window).height() + $(window).scrollTop();
+		if((scrollHeight - scrollPosition) / scrollHeight === 0) {
+			$('#tombolScrollTop').addClass('show animated fadeInRight');
+			// $('#tombolScrollTop').addClass('animated fadeIn');
+			// alert('cekk');
 		} else {
-			$('#tombolScrollTop').fadeOut();
+			// alert('tess');
+			$('#tombolScrollTop').removeClass('show');
 		}
 	});
 });
 
 function scrolltotop()
 {
-	$('html, body').animate({scrollTop : 0},500);
+	$('html, body').animate({scrollTop : 0},1500);
 }
   // END SCROLL TOP
 
@@ -21,7 +49,7 @@ function scrolltotop()
   $(document).ready(function() {
     var owl = $('.owl-carousel-1');
     owl.owlCarousel({
-      margin: 10,
+      margin: 10, 
       nav: true,
       responsive: {
         0: {
@@ -69,7 +97,7 @@ function scrolltotop()
     })
   })
   // END owlCarousel
-  
+
 $(document).ready(function() {
 	init();
 });
