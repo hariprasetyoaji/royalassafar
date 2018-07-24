@@ -66,7 +66,7 @@ function scrolltotop()
   $(document).ready(function() {
     var owl = $('.owl-carousel-1');
     owl.owlCarousel({
-      margin: 10, 
+      margin: 0, 
       nav: true,
       dots:false,
       responsive: {
