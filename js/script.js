@@ -21,7 +21,24 @@ $("#scroll-4").click(function() {
 });
 // end scroll bottom
 
+$(function () {
+	var screenWidth = $(window).width();
+	var screenHeight = $(window).height();
+	var $video = $('#videoid');
 
+	var ratio = screenHeight / screenWidth;
+	if ( ratio < (9/16) ) {
+		$video.css({
+			'height': 'auto',
+			'width': (screenWidth-50)+'px'
+		});
+	} else {
+		$video.css({
+			'height': (screenHeight-50)+'px',
+			'width': 'auto'
+		});
+	}
+});
   // START SCROLL TOP
 
   $(document).ready(function(){
@@ -51,21 +68,25 @@ function scrolltotop()
     owl.owlCarousel({
       margin: 10, 
       nav: true,
+      dots:false,
       responsive: {
         0: {
           items: 1
         },
-        600: {
+        520: {
+          items: 2
+        },
+        720: {
           items: 3
         },
-        1000: {
+        992: {
           items: 4
         }
       }
     })
     var owl = $('.owl-carousel-2');
     owl.owlCarousel({
-      margin: 10,
+      margin: 0,
       nav: true,
       responsive: {
         0: {
@@ -355,9 +376,9 @@ var TestimoniCarousel = $(".testimoni-carousel");
 TestimoniCarousel.owlCarousel({
     loop:true,
     margin:40,
-    items:3,
-    nav: true,
-    navText: [ "<i class='material-icons'>navigate_before</i>", "<i class='material-icons'>navigate_next</i>"]
+    items:1,
+    dots:false,
+    nav: true
 });
 
 var ClientCarousel = $(".client-carousel");
@@ -366,6 +387,17 @@ ClientCarousel.owlCarousel({
     margin:40,
     items:5
 });
+
+var VisiMisiCarousel = $(".VisiMisiCarousel");
+VisiMisiCarousel.owlCarousel({
+    loop:true,
+    margin:40,
+    autoPlay: 1000,
+    items:1,
+    dots: false,
+    nav: true
+});
+
 
 $('.navbar-toggler').on('click', function(event) {
 	event.preventDefault();
@@ -422,5 +454,5 @@ function setTimelineHeight(){
 
 	$('<style>#cd-timeline:before {height: calc(100% - ' + divHeight + 'px);}</style>').appendTo('head');
 
-	console.log(divHeight);
 }
+
