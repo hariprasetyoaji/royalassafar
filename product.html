@@ -12,6 +12,8 @@
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/owl.theme.default.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/slick.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/slick-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/hamburgers.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>    
@@ -97,66 +99,69 @@
                     <p class="product-subheader">Kami memahami setiap kebutuhan perjalanan ibadah anda</p>
                 </div>
             </div>
-            <div id="nav-produk" class="owl-carousel owl-carousel-1 owl-theme">
-                <div class="nav-produk-item">
-                    <a href="product.html#produk-layanan">
-                        <div class="itemproduk">
-                            <img src="images/p_diamond.png" >   
-                        </div>
-                        <div class="isiproduk">
-                            <div class="hari">Paket 9 hari</div>
-                            <div class="paket">DIAMOND</div>
-                            <!-- <div class="harga">IDR 70 Juta<br> --> 
-                            <div class="triangle"></div>   
-                        </div>
-                    </a>
-                </div>
-                <div class="nav-produk-item">
-                    <a href="productruby.html#produk-layanan">
-                        <div class="itemproduk">
-                            <img src="images/p_ruby.png" >
-                        </div>
-                        <div class="isiproduk">
-                            <div class="hari">Paket 9 hari</div>
-                            <div class="paket">RUBY</div>
-                            <!-- <div class="harga">IDR 30 Juta</div> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="nav-produk-item">
-                    <a href="productemerald.html#produk-layanan">
-                        <div class="itemproduk">
-                            <img src="images/p_emerald.png" >
-                         </div>
-                        <div class="isiproduk">
-                            <div class="hari">Paket 9 hari</div>
-                            <div class="paket">EMERALD</div>
-                            <!-- <div class="harga">IDR 26 Juta</div> -->
-                        </div>
-                    </a>
-                </div>
-                <div class="nav-produk-item">
-                    <a href="productsapphire.html#produk-layanan">
-                        <div class="itemproduk">
-                            <img src="images/p_saphire.png" >
-                        </div>
-                        <div class="isiproduk">
-                            <div class="hari">Paket 9 hari</div>
-                            <div class="paket">SAPPHIRE</div>
-                            <!-- <div class="harga">IDR 22.5 Juta</div> -->
-                        </div>
-                    </a>
-                </div>
+
+            <div class="nav-produk">
+                <ul class="nav nav-tabs product-nav-carousel" role="tablist">
+                    <li role="presentation" class="nav-produk-item ">
+                        <a href="#diamond" aria-controls="diamond" role="tab" data-toggle="tab" class="active">
+                            <div class="itemproduk">
+                                <img src="images/p_diamond.png" >   
+                            </div>
+                            <div class="isiproduk">
+                                <div class="hari">Paket 9 hari</div>
+                                <div class="paket">DIAMOND</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-produk-item">
+                        <a href="#ruby" aria-controls="ruby" role="tab" data-toggle="tab">
+                            <div class="itemproduk">
+                                <img src="images/p_ruby.png" >
+                            </div>
+                            <div class="isiproduk">
+                                <div class="hari">Paket 9 hari</div>
+                                <div class="paket">RUBY</div>
+                                <!-- <div class="harga">IDR 30 Juta</div> -->
+                            </div>
+                        </a>
+                    </li>
+                     <li role="presentation" class="nav-produk-item">
+                        <a href="#emerald" aria-controls="emerald" role="tab" data-toggle="tab">
+                            <div class="itemproduk">
+                                <img src="images/p_emerald.png" >
+                             </div>
+                            <div class="isiproduk">
+                                <div class="hari">Paket 9 hari</div>
+                                <div class="paket">EMERALD</div>
+                                <!-- <div class="harga">IDR 26 Juta</div> -->
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation" class="nav-produk-item">
+                        <a href="#sapphire" aria-controls="sapphire" role="tab" data-toggle="tab">
+                            <div class="itemproduk">
+                                <img src="images/p_saphire.png" >
+                            </div>
+                            <div class="isiproduk">
+                                <div class="hari">Paket 9 hari</div>
+                                <div class="paket">SAPPHIRE</div>
+                                <!-- <div class="harga">IDR 22.5 Juta</div> -->
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+            
         </div>
     </section>
 
     <section class="content product padding-top-md padding-bottom-lg">
         <div class="container container-sm">
-            <div class="row">
-                <div class="deskisi">
+            <div class="tab-content tab-content--product">
+                <div role="tabpanel" class="tab-pane deskisi active" id="diamond">
                     <div class="row">
-                        <div class="col-sm-6 wow fadeInUp"> 
+                        <div class="col-sm-12 col-lg-6"> 
                             <div class="product-entry">
                                 <div class="product-entry-title">
                                     <span class="product-entry-icon">
@@ -182,7 +187,7 @@
                                         bintang 5
                                     </p>
                                     <div class="product-entry-subtitle">
-                                        <h3>Madinah</small></h3>
+                                        <h3>Madinah</h3>
                                         <div class="product-entry-rate">
                                             <span class="star"></span>
                                             <span class="star"></span>
@@ -209,7 +214,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 wow fadeInUp">
+                        <div class="col-sm-12 col-lg-6"> 
                            <div class="product-entry">
                                 <div class="product-entry-title">
                                     <span class="product-entry-icon">
@@ -239,33 +244,606 @@
                         </div>
                     </div>  
                 </div>
+                <div role="tabpanel" class="tab-pane deskisi" id="ruby">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">  
+                            <div class="product-entry">
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_key.png">
+                                    </span>
+                                    <h2>Hotel</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <div class="product-entry-subtitle">
+                                        <h3>Mekah <small>(ka'bah View)</small></h3>
+                                        <div class="product-entry-rate">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="product-entry-text">
+                                        Pullman Zamzam • Movenpick • Swissotel • Fairmount at
+                                        ZamZam Tower • InterContinental Dar Al Tawhid • Al
+                                        Shafwah Royale Orchid • Hilton Suites • Setara hotel
+                                        bintang 5
+                                    </p>
+                                    <div class="product-entry-subtitle">
+                                        <h3>Madinah</h3>
+                                        <div class="product-entry-rate">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="product-entry-text">
+                                        InterContinental Madinah • Pullman ZamZam • Majlis Grand
+                                        Mercure • Setara Ring 1 langsung ke Masjid Nabawi
+                                    </p>
+                                </div>
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_plane.png">
+                                    </span>
+                                    <h2>Pesawat</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <p class="product-entry-text">
+                                        Economy Class Garuda Indonesia • Saudi Arabian Airlines
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6"> 
+                           <div class="product-entry">
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_bag.png">
+                                    </span>
+                                    <h2>Fasilitas Lainnya</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <ul>
+                                        <li>Dokter pendamping untuk minimal 40 jamaah</li>
+                                        <li>Transportasi di Saudi menggunakan GMC/ Bus dari Ali Magrabi</li>
+                                        <li>Koper berbahan plastik/fiber yang tidak mudah pecah dan elegan</li>
+                                        <li>Tas sandal</li>
+                                        <li>Tas & cover passport</li>
+                                        <li>Bahan kain seragam</li>
+                                        <li>Baju atau kain ihrom</li>
+                                        <li>Bergo</li>
+                                        <li>Syal atau pasmina</li>
+                                        <li>Mukena</li>
+                                        <li>ID Card dengan GPS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane deskisi" id="emerald">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">  
+                            <div class="product-entry">
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_key.png">
+                                    </span>
+                                    <h2>Hotel</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <div class="product-entry-subtitle">
+                                        <h3>Mekah <small>(ka'bah View)</small></h3>
+                                        <div class="product-entry-rate">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="product-entry-text">
+                                       Grand Rawdah • Setara 50-100 m ke Masjidil Haram
+                                    </p>
+                                    <div class="product-entry-subtitle">
+                                        <h3>Madinah</h3>
+                                        <div class="product-entry-rate">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="product-entry-text">
+                                        Al Madinah Harmony Hotel • Royal Andalusia • Setara Ring 2 ke Masjid Nabawi
+                                    </p>
+                                </div>
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_plane.png">
+                                    </span>
+                                    <h2>Pesawat</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <p class="product-entry-text">
+                                        Economy Class Etihad • Emirates • Oman Air • Malaysian Airlines • Royal Brunei (1x Transit)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6"> 
+                           <div class="product-entry">
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_bag.png">
+                                    </span>
+                                    <h2>Fasilitas Lainnya</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <ul>
+                                        <li>Dokter pendamping untuk minimal 80 jamaah</li>
+                                        <li>Transportasi di Saudi menggunakan GMC/ Bus dari Ali Magrabi</li>
+                                        <li>Koper berbahan plastik/fiber yang tidak mudah pecah dan elegan</li>
+                                        <li>Tas sandal</li>
+                                        <li>Tas & cover passport</li>
+                                        <li>Bahan kain seragam</li>
+                                        <li>Baju atau kain ihrom</li>
+                                        <li>Bergo</li>
+                                        <li>Syal atau pasmina</li>
+                                        <li>Mukena</li>
+                                        <li>ID Card dengan GPS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane deskisi" id="sapphire">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">  
+                            <div class="product-entry">
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_key.png">
+                                    </span>
+                                    <h2>Hotel</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <div class="product-entry-subtitle">
+                                        <h3>Mekah <small>(ka'bah View)</small></h3>
+                                        <div class="product-entry-rate">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="product-entry-text">
+                                        Sarawat Andalus • Setara 100-350 m ke Masjidil Haram
+                                    </p>
+                                    <div class="product-entry-subtitle">
+                                        <h3>Madinah</h3>
+                                        <div class="product-entry-rate">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="product-entry-text">
+                                        Zowar International Hotel • Andalusia • Setara Ring 3 Masjid
+                                    </p>
+                                </div>
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_plane.png">
+                                    </span>
+                                    <h2>Pesawat</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <p class="product-entry-text">
+                                        Economy Class Lion Air • Citilink Indonesia (Direct atau 1x transit for fuel only)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6"> 
+                           <div class="product-entry">
+                                <div class="product-entry-title">
+                                    <span class="product-entry-icon">
+                                        <img src="images/i_bag.png">
+                                    </span>
+                                    <h2>Fasilitas Lainnya</h2>
+                                </div>
+                                <div class="product-entry-content">
+                                    <ul>
+                                        <li>Dokter pendamping untuk minimal 80 jamaah</li>
+                                        <li>Transportasi di Saudi menggunakan GMC/ Bus dari Ali Magrabi</li>
+                                        <li>Koper berbahan plastik/fiber yang tidak mudah pecah dan elegan</li>
+                                        <li>Tas sandal</li>
+                                        <li>Tas & cover passport</li>
+                                        <li>Bahan kain seragam</li>
+                                        <li>Baju atau kain ihrom</li>
+                                        <li>Bergo</li>
+                                        <li>Syal atau pasmina</li>
+                                        <li>Mukena</li>
+                                        <li>ID Card dengan GPS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section><br>
+    </section>
     <!-- end produk dan layanan -->
 
 
     <!-- Start TimeLine -->
-    <section class="content-timeline wow fadeInUp padding-top-md">
+    <section class="content-timeline wow fadeInUp padding-top-md padding-bottom-xl">
         <div class="container">
             <p class="super-text padding-bottom-md text-center">Itinerary</p>
-            <div class="owl-carousel owl-carousel-2 owl-theme">
-                <div class="timeLine-item">
+            <div class="timeline-carousel slick-theme">
+                <div class="timeline-item">
                     <div class="timeline-item-head">
                         <h3>Hari</h3>
                     </div>
                     <div class="timeline-item-number">
-                        
+                        1
                     </div>
-                    <span>HARI</span>
-                    <div class="item-wrapper--1">
-                        <div class="timeline-angka">
-                            <p>1</p>
+                    <div class="timeline-list">
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/2.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Perjalanan menuju<br>Arab Saudi</p>
+                            </div>
                         </div>
-                        <div class="item-titik">
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-head">
+                        <h3>Hari</h3>
+                    </div>
+                    <div class="timeline-item-number">
+                        2
+                    </div>
+                    <div class="timeline-list">
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/tl_2_makam_rasul.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Ziarah ke Makam Rasul</p>
+                            </div>
                         </div>
-                        <div class="text-titik">
-                            <p>perjalanan menuju arap saudi</p>
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Ziarah ke Makam Abu
+                                    Bakar Assidiq & Umar
+                                    Bin Khattab</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/tl_2_raudhah.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Raudhah</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Masjid Nabawi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-head">
+                        <h3>Hari</h3>
+                    </div>
+                    <div class="timeline-item-number">
+                        3
+                    </div>
+                    <div class="timeline-list">
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image ">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Raudhah</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/tl_3_nabawi.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Masjid Nabawi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-head">
+                        <h3>Hari</h3>
+                    </div>
+                    <div class="timeline-item-number">
+                        4   
+                    </div>
+                    <div class="timeline-list">
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/tl_4_quba.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Masjid Quba</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Masjid Qiblatain</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/tl_4_uhud.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Jabal Uhud</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Masjid Tujuh</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Kebun Kurma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-head">
+                        <h3>Hari</h3>
+                    </div>
+                    <div class="timeline-item-number">
+                        5
+                    </div>
+                    <div class="timeline-list">
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image"></div>
+                            <div class="timeline-list-desc">
+                                <p>Persiapan ibadah umroh (Mandi Ihram)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image"></div>
+                            <div class="timeline-list-desc">
+                                <p>Mengambil Miqad di Masjid Bir Ali</p>
+                            </div>
+                        </div>
+                        <div class="timeline-list-item">
+                            <div class="timeline-list-image">
+                                <img src="images/tl_5_malam_makkah.jpg">
+                            </div>
+                            <div class="timeline-list-desc">
+                                <p>Malam hari tiba di Makkah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-item--big ">
+                    <div class="timeline-item-head">
+                        <h3>Hari</h3>
+                    </div>
+                    <div class="timeline-item-number">
+                        6
+                    </div>
+                    <div class="timeline-list timeline-list--big">
+                        <div class="timeline-list--col">
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Shalat Subuh<br>di Masjidil Haram</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item">
+                                <div class="timeline-list-image">
+                                    <img src="images/tl_6_jabal_nur.jpg">
+                                </div>
+                                <div class="timeline-list-desc">
+                                    <p>Jabal Nur</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Jabal Tsur</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item">
+                                <div class="timeline-list-image">
+                                    <img src="images/tl_6_arafah.jpg">
+                                </div>
+                                <div class="timeline-list-desc">
+                                    <p>Padang Arafah</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-list--col">
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Jabal Rahmah</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Mina Muzdalifah</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Ji’ronah ( tempat
+                                        pengambilan Miqod
+                                        untuk Umroh Sunnah )</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item">
+                                <div class="timeline-list-image">
+                                    <img src="images/tl_6_mala.jpg">
+                                </div>
+                                <div class="timeline-list-desc">
+                                    <p>Makam Al Ma’la</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-list--col">
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Masjid Jin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-item--big ">
+                    <div class="timeline-item-head">
+                        <h3>Hari</h3>
+                    </div>
+                    <div class="timeline-item-number">
+                        7
+                    </div>
+                    <div class="timeline-list timeline-list--big">
+                        <div class="timeline-list--col">
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Makkah</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Shalat di Masjidil Haram</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item">
+                                <div class="timeline-list-image">
+                                    <img src="images/tl_7_rumah_siti.jpg">
+                                </div>
+                                <div class="timeline-list-desc">
+                                    <p>Bekas rumah Siti Khadijah</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Persiapan check out</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-list--col">
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Masjidil Haram</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Tawaf Wada</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Perjalanan ke Jeddah</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item">
+                                <div class="timeline-list-image">
+                                    <img src="images/tl_7_terapung.jpg">
+                                </div>
+                                <div class="timeline-list-desc">
+                                    <p>Masjid Terapung</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Laut Merah</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-list--col">
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Makam Siti Hawa</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Masjid Qishas</p>
+                                </div>
+                            </div>
+                            <div class="timeline-list-item timeline-list-item--no-image">
+                                <div class="timeline-list-image"></div>
+                                <div class="timeline-list-desc">
+                                    <p>Persiapan kembali ke Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-item--merged">
+                    <div class="timeline-item-head--wrapper">
+                        <div class="timeline-item-head--col">
+                            <div class="timeline-item-head">
+                                <h3>Hari</h3>
+                            </div>
+                            <div class="timeline-item-number">
+                                8
+                            </div>
+                        </div>
+                        <div class="timeline-item-head--col">
+                            <div class="timeline-item-head">
+                                <h3>Hari</h3>
+                            </div>
+                            <div class="timeline-item-number">
+                                9
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-list">
+                         <div class="timeline-list-item timeline-list-item--no-image">
+                            <div class="timeline-list-image"></div>
+                            <div class="timeline-list-desc">
+                                <p>Kembali ke<br>Indonesia</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -275,7 +853,7 @@
 <!-- end Timeline -->
 
   <!-- Scroll Top -->
-<div id="tombolScrollTop" onclick="scrolltotop()"><img src="images/up/up.png" alt=""></div>
+    <div id="tombolScrollTop" onclick="scrolltotop()"><img src="images/up/up.png" alt=""></div>
   <!--END Scroll Top -->
 
     <footer id="cek_footer" class="footer">
@@ -361,6 +939,7 @@
     <script src="js/modernizr.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/timeline.js"></script>

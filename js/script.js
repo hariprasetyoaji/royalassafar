@@ -23,21 +23,46 @@ $("#scroll-4").click(function() {
 
 $(function () {
 	var screenWidth = $(window).width();
-	var screenHeight = $(window).height();
+	var screenHeight = $(window).innerHeight();
+	var screenHeightBiasa = $(window).height();
 	var $video = $('#videoid');
+	var video = $video.get()[0];
+
 
 	var ratio = screenHeight / screenWidth;
 	if ( ratio < (9/16) ) {
 		$video.css({
 			'height': 'auto',
-			'width': (screenWidth-50)+'px'
+			'width': (screenWidth)+'px'
 		});
 	} else {
 		$video.css({
-			'height': (screenHeight-50)+'px',
+			'height': (screenHeight)+'px',
 			'width': 'auto'
 		});
 	}
+
+	$video.on('loadstart', function (event) {
+		$('.video-loader').css('visibility', 'visible');
+	    $('.video-loader').css('opacity', '1');
+	    // video.play();
+	});
+	
+	$video.on('canplay', function (event) {
+     	$video.css('visibility', 'visible');
+	    $('.video-loader').css('visibility', 'hidden');
+	    $('.video-loader').css('opacity', '0');
+	    video.play();
+	});
+
+	/*video.addEventListener('loadeddata', function() {
+	    video.play();
+	});
+
+	video.addEventListener('pause', function() {
+	    video.play();
+	});*/
+
 });
   // START SCROLL TOP
 
@@ -84,43 +109,78 @@ function scrolltotop()
         }
       }
     })
-    var owl = $('.owl-carousel-2');
-    owl.owlCarousel({
-      margin: 0,
-      nav: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
     var owl = $('.owl-carousel-3');
     owl.owlCarousel({
-      margin: 10,
       nav: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 4
-        }
-      }
+      items: 1
     })
   })
   // END owlCarousel
 
+
 $(document).ready(function() {
 	init();
+
+
+   	$('.timeline-carousel').slick({
+		variableWidth: true,
+		infinite: false,
+		/*nextArrow: '<i class="material-icons">chevron_right</i>',
+		prevArrow: '<i class="material-icons">chevron_left</i>',*/
+  	});
+
+	$('.product-nav-carousel').slick({
+		infinite: false,
+		slidesToShow: 4,
+  		slidesToScroll: 4,
+  		responsive: [
+  			{
+				breakpoint: 720,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			}, {
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}, {
+				breakpoint: 414,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+  		]
+  	});
+
+  	$('.product-nav-carousel a').click(function (e) {
+		e.preventDefault();
+
+		var _this = $(this);
+		var nav_id = $(_this).attr('href');
+
+		$('.product-nav-carousel li a').each(function() {
+			$(this).removeClass('active');
+		});
+
+		_this.addClass('active');
+
+	
+		$('.tab-content--product .tab-pane').each(function() {
+
+			if ( $(this).attr('id') == nav_id.substring(1) ) {
+				$(this).addClass('active');
+				$(this).tab('show');
+			} else {
+				$(this).removeClass('active');
+			}
+
+		});
+
+	});
 });
 
 function init() {

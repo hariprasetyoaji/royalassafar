@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/slick.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/slick-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/hamburgers.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -70,9 +72,12 @@
   <section class="landing-wrapper">
     <div class="container">
       <div class="video-wrapper">
-        <video id="videoid" preload="auto" autoplay="" loop="">
-          <source src="videos/index_video.mp4" type="video/mp4"> No flash player has been set up. <a href="/admin/config/media/video/players">Please select a player to play Flash videos.</a>
+        <video id="videoid" preload="auto" autoplay="" loop="" muted preload="none">
+          <source src="videos/index_video.mp4" type="video/mp4">
         </video>
+        <div class="video-loader">
+          <div class="lds-facebook"><div></div><div></div><div></div></div>
+        </div>
       </div>
       <div class="nav-content-wrapper">
         <div class="nav-content">
@@ -98,7 +103,7 @@
   <!-- judul utama -->
   <section class="content greet" id="bhome">
       <div class="container">
-        <p class="super-text wow fadeInUp text-center padding-bottom-lg" id="judulutama">
+        <p class="super-text wow fadeInUp text-center" id="judulutama">
           Kami Merencanakan <br>
           Perjalanan Ibadah <br>
           Terbaik & Penuh Berkah
@@ -130,95 +135,76 @@
   </section>
 <!-- end judul utama -->
 
-<!-- start konten layanan -->
-<section class="content discover">
-    <div class="container" id="contendisc">
-      <div class="row">
-        <div class="discover-col col-sm-4  wow fadeInUp">
-          <a href="#" class="discover-link"></a>
-          <div class="discover-wrapper">
-            <div class="discover-content-wrapper">
-              <div class="discover-content">
-                <p>Discover the holly city of</p>
-                <h3>Mecca</h3>
-              </div>
-            </div>
+<div class="content home-product">
+  <div class="container">
+    <div class="home-product-wrapper">
+      <div class="home-product-item">
+        <div class="home-product-overlay"></div>
+        <div class="home-product-image" style="background-image: url('images/p_bg_diamond.jpg');"></div>
+        <div class="home-product-content">
+          <div class="itemproduk">
+              <img src="images/p_diamond.png">
           </div>
-          <div class="discover-bg" style="background-image: url('images/discover-mecca.jpg');"></div>
+          <div class="isiproduk">
+              <div class="hari">Paket 9 hari</div>
+              <div class="paket">DIAMOND</div>
+              <!-- <div class="harga">IDR 30 Juta</div> -->
+          </div>
         </div>
-        <div class="discover-col col-sm-4  wow fadeInUp">
-          <a href="#" class="discover-link"></a>
-          <div class="discover-wrapper">
-            <div class="discover-content-wrapper">
-              <div class="discover-content">
-                <p>Discover the ancient city of</p>
-                <h3>Petra</h3>
-              </div>
-            </div>
+      </div>
+      <div class="home-product-item">
+        <div class="home-product-overlay"></div>
+        <div class="home-product-image" style="background-image: url('images/p_bg_ruby.jpg');"></div>
+        <div class="home-product-content">
+          <div class="itemproduk">
+              <img src="images/p_ruby.png">
           </div>
-          <div class="discover-bg" style="background-image: url('images/discover-petra.jpg');"></div>
+          <div class="isiproduk">
+              <div class="hari">Paket 9 hari</div>
+              <div class="paket">RUBY</div>
+              <!-- <div class="harga">IDR 30 Juta</div> -->
+          </div>
         </div>
-        <div class="discover-col col-sm-4  wow fadeInUp">
-          <a href="#" class="discover-link"></a>
-          <div class="discover-wrapper">
-            <div class="discover-content-wrapper">
-              <div class="discover-content">
-                <p>Discover the ancient city of</p>
-                <h3>Petra</h3>
-              </div>
-            </div>
+      </div>
+      <div class="home-product-item">
+        <div class="home-product-overlay"></div>
+        <div class="home-product-image" style="background-image: url('images/p_bg_emerald.jpg');"></div>
+        <div class="home-product-content">
+          <div class="itemproduk">
+              <img src="images/p_emerald.png">
           </div>
-          <div class="discover-bg" style="background-image: url('images/discover-petra.jpg');"></div>
+          <div class="isiproduk">
+              <div class="hari">Paket 9 hari</div>
+              <div class="paket">EMERALD</div>
+              <!-- <div class="harga">IDR 30 Juta</div> -->
+          </div>
         </div>
-        <div class="discover-col col-sm-4  wow fadeInUp">
-          <a href="#" class="discover-link"></a>
-          <div class="discover-wrapper">
-            <div class="discover-content-wrapper">
-              <div class="discover-content">
-                <p>Discover the ancient city of</p>
-                <h3>Petra</h3>
-              </div>
-            </div>
+      </div>
+      <div class="home-product-item">
+        <div class="home-product-overlay"></div>
+        <div class="home-product-image" style="background-image: url('images/p_bg_sapphire.jpg');"></div>
+        <div class="home-product-content">
+          <div class="itemproduk">
+              <img src="images/p_saphire.png">
           </div>
-          <div class="discover-bg" style="background-image: url('images/discover-petra.jpg');"></div>
-        </div>
-        <div class="discover-col col-sm-4  wow fadeInUp">
-          <a href="#" class="discover-link"></a>
-          <div class="discover-wrapper">
-            <div class="discover-content-wrapper">
-              <div class="discover-content">
-                <p>Discover the ancient city of</p>
-                <h3>Petra</h3>
-              </div>
-            </div>
+          <div class="isiproduk">
+              <div class="hari">Paket 9 hari</div>
+              <div class="paket">SAPPHIRE</div>
+              <!-- <div class="harga">IDR 30 Juta</div> -->
           </div>
-          <div class="discover-bg" style="background-image: url('images/discover-petra.jpg');"></div>
-        </div>
-        <div class="discover-col col-sm-4  wow fadeInUp">
-          <a href="#" class="discover-link"></a>
-          <div class="discover-wrapper">
-            <div class="discover-content-wrapper">
-              <div class="discover-content">
-                <p>Discover the ancient city of</p>
-                <h3>Petra</h3>
-              </div>
-            </div>
-          </div>
-          <div class="discover-bg" style="background-image: url('images/discover-petra.jpg');"></div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- end kontet layanan -->
+  </div>
+</div>
+
 
 <!-- start konten blog -->
-  <section class="content media">
+  <section class="content media padding-top-md">
     <div class="container" id="contenblog">
-      <div class="row">
-        <div class="col-sm-12 padding-bottom-sm">
-          <p class="super-text text-center" id="judulmedia">Media</p>
-        </div>
-      </div>
+      <p class="super-text wow fadeInUp text-center">
+        Media
+      </p>
       <div class="media-wrapper">
         <div class="media-item wow">
           <a href="#" class="media-image">
@@ -287,28 +273,24 @@
 
 
 <!-- start testimoni -->
-<section class="content testi">
+<section class="content testi padding-bottom-sm">
     <div class="container container-sm">
-      <div class="row">
-          <div class="col-sm-12">
-              <p class="super-text padding-bottom-md text-center">Testimoni</p>
-          </div>   
-          <div class="owl-carousel testimoni-carousel owl-theme padding-bottom-lg">
-            <div class="item text-center">
-                <p class="isitesti">
-                  Terima kasih Royal Assafar yang telah memberangkatkan rombongan PGRI Kab. Bandung dengan pelayanan yang begitu maksimal meski keingingan jamaah berbeda.<br>Semoga tahun selanjutnya dapat kembali lagi dan inshaAllah kembali mempercayai Royal Assafar sebagai agen travel.
-                </p>
-                <span class="person-testi">Rombongan PGRI Kab. Bandung </span>
-            </div>
-            <div class="item text-center">
-                <p class="isitesti">
-                  Terimakasih Royal Assafar yang telah memberikan pengalaman yang luar biasa sekali. Semoga perjalanan umroh ini mendapat berkah dan ridha Allah, sehingga dapat kembali ke sini.
-                </p>
-                <span class="person-testi">Rombongan PGRI Kab. Bandung </span>
-            </div>
-          </div>
-      </div> 
-      <hr>
+      <p class="super-text text-center">Testimoni</p>
+      <div class="owl-carousel testimoni-carousel owl-theme">
+        <div class="item text-center">
+            <p class="isitesti">
+              Terima kasih Royal Assafar yang telah memberangkatkan rombongan PGRI Kab. Bandung dengan pelayanan yang begitu maksimal meski keingingan jamaah berbeda.<br>Semoga tahun selanjutnya dapat kembali lagi dan inshaAllah kembali mempercayai Royal Assafar sebagai agen travel.
+            </p>
+            <span class="person-testi">Rombongan PGRI Kab. Bandung </span>
+        </div>
+        <div class="item text-center">
+            <p class="isitesti">
+              Terimakasih Royal Assafar yang telah memberikan pengalaman yang luar biasa sekali. Semoga perjalanan umroh ini mendapat berkah dan ridha Allah, sehingga dapat kembali ke sini.
+            </p>
+            <span class="person-testi">Rombongan PGRI Kab. Bandung </span>
+        </div>
+      </div>
+      <hr class="margin-top-lg">
     </div>
 </section>
 <!-- end testimoni -->
@@ -317,7 +299,7 @@
   <!-- start partner kami -->
    <section class="content client padding-top-sm padding-bottom-lg">
           <div class="container row-md">
-            <p class="super-text padding-bottom-md text-center" id="supertext">Partner Kami</p>
+            <p class="super-text padding-bottom-sm text-center" id="supertext">Partner Kami</p>
               <div class="client-wrapper">
                   <div class="client-item">
                       <img src="images/logo-pii.png" class="img-fluid">
@@ -351,7 +333,7 @@
           </div>
         </div>
       </div>
-      <div class="row narrow padding-bottom-md">
+      <div class="row narrow padding-bottom-sm">
         <div class="col-sm-12">
           <h3>Contact Us</h3>
         </div>
@@ -423,14 +405,17 @@
 
   
   <!--  Scripts-->
-  <script src="js/jquery-2.1.1.min.js"></script>
+ <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/tether.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/modernizr.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
-
+  <script src="js/timeline.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>
